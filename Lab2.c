@@ -70,3 +70,51 @@ int main()
 
     return 0;
 }
+
+// 4. Write a program to find if a character entered by user is upper case or not.
+#include <stdio.h>
+int main()
+{
+    char character;
+    printf("Enter a character: ");
+    scanf("%c", &character);
+    if (character >= 'A' && character <= 'Z')
+        printf("%c is an upper case letter.", character);
+    else
+        printf("%c is not an upper case letter.", character);
+
+    return 0;
+}
+
+// 5. Write a C program to input marks of five subjects Physics, Chemistry, Biology,
+// Mathematics and Computer, calculate their grade according to given conditions:
+//             If percentage &gt;= 90: Grade A
+//             If percentage &gt;= 80: Grade B
+//             If percentage &gt;= 70: Grade C
+//             If percentage &gt;= 60: Grade D
+//             If percentage &gt;= 40: Grade E
+//             If percentage &lt; 40: Grade F
+
+#include <stdio.h>
+int main()
+{
+    float physics, chemistry, biology, mathematics, computer, percentage;
+    printf("Enter marks of Physics, Chemistry, Biology, Mathematics and Computer: ");
+    scanf("%f %f %f %f %f", &physics, &chemistry, &biology, &mathematics, &computer);
+    percentage = (physics + chemistry + biology + mathematics + computer) / 5;
+    if (percentage >= 90)
+        printf("Grade A");
+    else if (percentage >= 80)
+        printf("Grade B");
+    else if (percentage >= 70)
+
+        printf("Grade C");
+    else if (percentage >= 60)
+
+        printf("Grade D");
+    else if (percentage >= 40)
+        printf("Grade E");
+    else if (percentage < 40)
+        printf("Grade F");
+    return 0;
+}
